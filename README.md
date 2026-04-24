@@ -42,14 +42,8 @@ SME maturity evaluation
 Business intelligence scoring
 Technology readiness analysis
 Self-audit platform
-Project Structure
-PMO-5.0-Platform
-│
-├── app.py
-├── templates/
-├── static/
-├── database.db
-└── README.md
+
+
 How it Works
 User fills out the digital maturity questionnaire
 The system calculates the score automatically
@@ -63,6 +57,7 @@ PDF report generation
 AI-based recommendation engine
 Multi-tenant SaaS deployment
 Cloud hosting
+
 Author
 
 Wade Delille
