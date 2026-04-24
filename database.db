@@ -1,0 +1,49 @@
+import sqlite3
+
+DB_NAME = "database.db"
+
+def get_connection():
+    return sqlite3.connect(DB_NAME)
+
+def init_database():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS responses (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        company TEXT NOT NULL,
+        q1 INTEGER NOT NULL,
+        q2 INTEGER NOT NULL,
+        q3 INTEGER NOT NULL,
+        score INTEGER NOT NULL,
+        level TEXT NOT NULL
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+def insert_response(company, q1, q2, q3, score, level):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+    INSERT INTO responses (company, q1, q2, q3, score, level)
+    VALUES (?, ?, ?, ?, ?, ?)
+    """, (company, q1, q2, q3, score, level))
+
+    conn.commit()
+    conn.close()
+
+
+def get_all_responses():
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM responses")
+    data = cursor.fetchall()
+
+    conn.close()
+    return data
