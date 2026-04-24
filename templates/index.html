@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PMO 5.0</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>PMO 5.0 Auto Evaluation</h1>
+
+<form method="POST" action="/submit">
+
+<input type="text" name="company"
+placeholder="Nom entreprise" required>
+
+<h3>ERP utilisé ?</h3>
+<input type="radio" name="q1" value="1"> Non
+<input type="radio" name="q1" value="2"> Partiel
+<input type="radio" name="q1" value="3"> Oui
+
+<h3>Stratégie numérique ?</h3>
+<input type="radio" name="q2" value="1"> Non
+<input type="radio" name="q2" value="2"> En cours
+<input type="radio" name="q2" value="3"> Oui
+
+<h3>Tableaux de bord ?</h3>
+<input type="radio" name="q3" value="1"> Non
+<input type="radio" name="q3" value="2"> Partiel
+<input type="radio" name="q3" value="3"> Oui
+
+<br><br>
+<button type="submit">Calculer</button>
+
+</form>
+
+</body>
+</html>
