@@ -11,3 +11,22 @@ Fonctionnalités :
 
 Auteur : Wade Delille
 Objectif : Admission Master Canada
+
+
+▶️ COMMENT LANCER LE PROJET
+
+Installer Flask :
+
+pip install flask
+
+Lancer :
+
+python app.py
+
+Ouvrir navigateur :
+
+http://127.0.0.1:5000
+
+Dashboard admin :
+
+http://127.0.0.1:5000/admin
